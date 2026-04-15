@@ -9,7 +9,7 @@ from skellymodels.core.rigid_body.rigid_body_definition import (
     CoordinateFrameDefinition,
     RigidBodyDefinition,
 )
-from skellymodels.kinematics.bridge import (
+from skellymodels.core.kinematics import (
     build_reference_geometry_data,
     compute_basis_from_definition,
     compute_swing_quaternion,

@@ -24,10 +24,10 @@ Every step is an explicit function call with named arguments. No hidden state.
 ## Step 1: Load definitions
 
 ```python
-from skellymodels.skeleton import load_skeleton_from_yaml
-from skellymodels.mapping import load_mapping_from_yaml
-from skellymodels.models.tracking_model_info import load_tracker_info_from_yaml
-from skellymodels.biomechanics.com_loader import load_com_from_yaml
+from skellymodels.core.skeleton import load_skeleton_from_yaml
+from skellymodels.core.mapping import load_mapping_from_yaml
+from skellymodels.core.models.tracking_model_info import load_tracker_info_from_yaml
+from skellymodels.core.biomechanics import load_com_from_yaml
 
 skeleton = load_skeleton_from_yaml("skellymodels/configs/skeletons/human_body.yaml")
 mapping = load_mapping_from_yaml("skellymodels/configs/mappings/mediapipe_human_body.yaml")
@@ -82,7 +82,8 @@ trajectory.keypoints.skull_origin_foramen_magnum
 ### Center of mass
 
 ```python
-from skellymodels.biomechanics.pipeline import calculate_center_of_mass
+
+from skellymodels.core.biomechanics.calculate_com import calculate_center_of_mass
 
 total_com, segment_com = calculate_center_of_mass(
     trajectory=trajectory,
@@ -96,7 +97,7 @@ For each CoM segment: looks up proximal/distal from `skeleton.segment_connection
 ### Rigid bone enforcement
 
 ```python
-from skellymodels.biomechanics.pipeline import enforce_rigid_bones
+from skellymodels.core.biomechanics.enforce_rigid_bones import enforce_rigid_bones
 
 rigid_trajectory = enforce_rigid_bones(trajectory=trajectory, skeleton=skeleton)
 ```
@@ -110,7 +111,7 @@ Typical order: rigid bones first, then CoM on the rigidified data.
 See [Kinematics](kinematics.md) for full details.
 
 ```python
-from skellymodels.kinematics.bridge import compute_basis_from_definition
+from skellymodels.core.kinematics import compute_basis_from_definition
 
 # Works for any rigid body — fully constrained or under-constrained
 basis, origin = compute_basis_from_definition(

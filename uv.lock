@@ -421,6 +421,11 @@ wheels = [
 ]
 
 [[package]]
+name = "skellylogs"
+version = "0.1.0"
+source = { git = "https://github.com/freemocap/skellylogs#9114990350d7fb36747526286671c17abd7e523e" }
+
+[[package]]
 name = "skellymodels"
 version = "0.1.0"
 source = { virtual = "." }
@@ -430,6 +435,7 @@ dependencies = [
     { name = "pandas" },
     { name = "pydantic" },
     { name = "pyyaml" },
+    { name = "skellylogs" },
 ]
 
 [package.optional-dependencies]
@@ -454,6 +460,7 @@ requires-dist = [
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "scipy", marker = "extra == 'bvh'", specifier = ">=1.11" },
+    { name = "skellylogs", git = "https://github.com/freemocap/skellylogs" },
 ]
 provides-extras = ["bvh", "dev"]
 

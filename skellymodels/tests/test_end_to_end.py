@@ -3,11 +3,10 @@
 from pathlib import Path
 
 import numpy as np
-import pytest
 
-from skellymodels.skeleton.skeleton_loader import load_skeleton_from_yaml
-from skellymodels.mapping.mapping_loader import load_mapping_from_yaml
-from skellymodels.biomechanics.com_loader import load_com_from_yaml
+from skellymodels.core.skeleton.skeleton_loader import load_skeleton_from_yaml
+from skellymodels.core.mapping import load_mapping_from_yaml
+from skellymodels.core.biomechanics import load_com_from_yaml
 from skellymodels.core.trajectory.typed_trajectories import SpatialTrajectory
 
 CONFIGS_DIR = Path(__file__).resolve().parent.parent / "configs"

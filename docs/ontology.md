@@ -74,7 +74,7 @@ Convention: **+X forward, +Y left, +Z up. Right-handed only.**
 
 ### YAML
 
-See [`configs/skeletons/human_body.yaml`](../skellymodels/configs/skeletons/human_body.yaml), [`configs/rigid_bodies/charuco_board_5x3.yaml`](../skellymodels/configs/rigid_bodies/charuco_board_5x3.yaml).
+See [`configs/skeletons/human_body.yaml`](../skellymodels/configs/skeletons/human_body.yaml), [`configs/rigid_bodies/charuco_board_5x3.yaml`](../skellymodels/configs/actors/charuco_board_5x3.yaml).
 
 2-keypoint bodies omit `coordinate_frame` — the loader auto-generates a 1-axis frame:
 
@@ -98,7 +98,7 @@ skull:
 
 ## SkeletonDefinition
 
-**Module:** [`skeleton/skeleton_definition.py`](../skellymodels/skeleton/skeleton_definition.py)
+**Module:** [`skeleton/skeleton_definition.py`](../skellymodels/core/skeleton/skeleton_definition.py)
 
 A complete articulated structure: rigid bodies + linkages + chains.
 
@@ -151,7 +151,7 @@ chains:
 
 ## KeypointMapping
 
-**Module:** [`mapping/keypoint_mapping.py`](../skellymodels/mapping/keypoint_mapping.py)
+**Module:** [`mapping/keypoint_mapping.py`](../skellymodels/core/mapping/keypoint_mapping.py)
 
 Translates tracker namespace → skeleton namespace. Three forms, inferred from YAML shape:
 
@@ -184,7 +184,7 @@ mappings:
 
 ## CoMDefinition
 
-**Module:** [`biomechanics/com_definition.py`](../skellymodels/biomechanics/com_definition.py)
+**Module:** [`biomechanics/com_definition.py`](../skellymodels/core/biomechanics/com_definition.py)
 
 Anthropometric table: skeleton segments → mass distribution. Multiple configs can target the same skeleton.
 
@@ -200,7 +200,7 @@ See [`configs/center_of_mass/human_body_de_leva.yaml`](../skellymodels/configs/c
 
 ## TrackerModelInfo
 
-**Module:** [`models/tracking_model_info.py`](../skellymodels/models/tracking_model_info.py)
+**Module:** [`models/tracking_model_info.py`](../skellymodels/core/models/tracking_model_info.py)
 
 Metadata about a tracker: name, aspect names, tracked point names per aspect, order. Used by `KeypointMapping.apply_from_tracker()` to resolve point names without the user constructing raw string lists.
 

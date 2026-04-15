@@ -5,8 +5,8 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from skellymodels.mapping.keypoint_mapping import KeypointMapping
-from skellymodels.mapping.mapping_loader import load_mapping_from_yaml
+from skellymodels.core.mapping import KeypointMapping
+from skellymodels.core.mapping import load_mapping_from_yaml
 
 CONFIGS_DIR = Path(__file__).resolve().parent.parent / "configs"
 MEDIAPIPE_MAPPING_PATH = CONFIGS_DIR / "mappings" / "mediapipe_human_body.yaml"

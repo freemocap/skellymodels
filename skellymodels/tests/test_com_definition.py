@@ -4,11 +4,11 @@ from pathlib import Path
 
 import pytest
 
-from skellymodels.biomechanics.com_definition import (
+from skellymodels.core.biomechanics.com_definition import (
     CoMDefinition,
     SegmentCoMParameters,
 )
-from skellymodels.biomechanics.com_loader import load_com_from_yaml
+from skellymodels.core.biomechanics import load_com_from_yaml
 
 CONFIGS_DIR = Path(__file__).resolve().parent.parent / "configs"
 DE_LEVA_PATH = CONFIGS_DIR / "center_of_mass" / "human_body_de_leva.yaml"

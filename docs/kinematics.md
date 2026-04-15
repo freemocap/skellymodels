@@ -1,6 +1,6 @@
 # Kinematics
 
-**Module:** [`kinematics/bridge.py`](../skellymodels/kinematics/bridge.py)
+**Module:** [`kinematics/bridge.py`](../skellymodels/core/kinematics/bridge.py)
 
 ## Quaternion orientation
 
@@ -55,7 +55,7 @@ The resulting quaternion has zero twist by construction. The secondary and terti
 The bridge between abstract definitions and runtime computation:
 
 ```python
-from skellymodels.kinematics.bridge import compute_basis_from_definition
+from skellymodels.core.kinematics import compute_basis_from_definition
 
 # Works for BOTH fully-constrained and under-constrained bodies
 basis, origin = compute_basis_from_definition(
@@ -76,7 +76,7 @@ basis, origin = compute_basis_from_definition(
 For trajectory-level quaternion computation on under-constrained bodies:
 
 ```python
-from skellymodels.kinematics.bridge import compute_swing_quaternion_trajectory
+from skellymodels.core.kinematics import compute_swing_quaternion_trajectory
 
 rest_direction = np.array([0, 0, -1])  # bone points downward at rest
 observed = trajectory.keypoints.right_elbow - trajectory.keypoints.right_shoulder

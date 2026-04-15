@@ -17,9 +17,9 @@ pip install -e ".[bvh]"   # + scipy for BVH export
 ## Quick start
 
 ```python
-from skellymodels.skeleton import load_skeleton_from_yaml
-from skellymodels.mapping import load_mapping_from_yaml
-from skellymodels.models.tracking_model_info import load_tracker_info_from_yaml
+from skellymodels.core.skeleton import load_skeleton_from_yaml
+from skellymodels.core.mapping import load_mapping_from_yaml
+from skellymodels.core.models.tracking_model_info import load_tracker_info_from_yaml
 from skellymodels.core.trajectory import SpatialTrajectory
 
 # Load definitions
@@ -29,7 +29,7 @@ tracker_info = load_tracker_info_from_yaml("skellymodels/tracker_info/mediapipe_
 
 # Apply mapping — tracker_info handles the point names, no raw strings needed
 mapped_array = mapping.apply_from_tracker(
-    tracked_array=tracker_data,   # (num_frames, 33, 3) from mediapipe
+    tracked_array=tracker_data,  # (num_frames, 33, 3) from mediapipe
     tracker_info=tracker_info,
     aspect_name="body",
 )
@@ -42,20 +42,20 @@ trajectory = SpatialTrajectory(
 )
 
 # Access data via dot notation — no raw strings
-right_shoulder = trajectory.keypoints.right_shoulder   # (num_frames, 3)
+right_shoulder = trajectory.keypoints.right_shoulder  # (num_frames, 3)
 skull_origin = trajectory.keypoints.skull_origin_foramen_magnum
 
 # Or by string indexing when you need it
 right_shoulder = trajectory["right_shoulder"]
 
 # Skeleton properties — all derived from the definition
-skull_def = skeleton.rb.skull             # RigidBodyDefinition via dot access
-hierarchy = skeleton.joint_hierarchy      # parent → children keypoint tree
-junctions = skeleton.junction_keypoints   # FABRIK reconciliation points
+skull_def = skeleton.rb.skull  # RigidBodyDefinition via dot access
+hierarchy = skeleton.joint_hierarchy  # parent → children keypoint tree
+junctions = skeleton.junction_keypoints  # FABRIK reconciliation points
 
 # Biomechanics
-from skellymodels.biomechanics.com_loader import load_com_from_yaml
-from skellymodels.biomechanics.pipeline import calculate_center_of_mass
+from skellymodels.core.biomechanics import load_com_from_yaml
+from skellymodels.core.biomechanics.calculate_com import calculate_center_of_mass
 
 com_def = load_com_from_yaml("skellymodels/configs/center_of_mass/human_body_de_leva.yaml")
 total_com, segment_com = calculate_center_of_mass(trajectory, skeleton, com_def)

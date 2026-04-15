@@ -3,12 +3,11 @@
 from pathlib import Path
 
 import numpy as np
-import pytest
 
-from skellymodels.biomechanics.com_definition import CoMDefinition, SegmentCoMParameters
-from skellymodels.biomechanics.pipeline import calculate_center_of_mass, enforce_rigid_bones
+from skellymodels.core.biomechanics.com_definition import CoMDefinition, SegmentCoMParameters
+from skellymodels.core.biomechanics.enforce_rigid_bones import calculate_center_of_mass, enforce_rigid_bones
 from skellymodels.core.trajectory.typed_trajectories import SpatialTrajectory
-from skellymodels.skeleton.skeleton_loader import load_skeleton_from_yaml
+from skellymodels.core.skeleton.skeleton_loader import load_skeleton_from_yaml
 
 CONFIGS_DIR = Path(__file__).resolve().parent.parent / "configs"
 TEST_SKELETON_PATH = CONFIGS_DIR / "skeletons" / "test_skeleton.yaml"

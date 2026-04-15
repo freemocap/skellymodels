@@ -10,12 +10,18 @@ dependencies = [
     "pandas>=2.0",
     "pyyaml>=6.0",
     "beartype>=0.18",
+        "skellylogs",
+
 ]
+
+[tool.uv.sources]
+skellylogs = { git = "https://github.com/freemocap/skellylogs" }
 
 [project.optional-dependencies]
 bvh = [
     "scipy>=1.11",
 ]
+
 dev = [
     "pytest>=8.0",
 ]

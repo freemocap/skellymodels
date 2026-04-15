@@ -38,6 +38,9 @@ SegmentName = str
 AxisName = str
 """Name of a coordinate axis ('x_axis', 'y_axis', 'z_axis')."""
 
+ComSourceString = str
+"""Identifier for a source of center of mass information (e.g. 'winter_1999')."""
+ComSourceName = str
 # --- Numeric types ---
 
 MassFraction = float

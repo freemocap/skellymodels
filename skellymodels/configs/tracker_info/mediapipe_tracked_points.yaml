@@ -1,0 +1,153 @@
+---
+name: mediapipe
+tracker_name: MediapipeHolisticTracker
+
+#=================================
+# Aspect Order
+#=================================     
+order: 
+  - body
+  - right_hand
+  - left_hand
+  - face
+
+aspects:
+  #=================================
+  # Body Aspect Configuration
+  #=================================
+  body:
+    tracked_points:
+      type: list
+      names:
+        - nose
+        - left_eye_inner
+        - left_eye
+        - left_eye_outer
+        - right_eye_inner
+        - right_eye
+        - right_eye_outer
+        - left_ear
+        - right_ear
+        - mouth_left
+        - mouth_right
+        - left_shoulder
+        - right_shoulder
+        - left_elbow
+        - right_elbow
+        - left_wrist
+        - right_wrist
+        - left_pinky
+        - right_pinky
+        - left_index
+        - right_index
+        - left_thumb
+        - right_thumb
+        - left_hip
+        - right_hip
+        - left_knee
+        - right_knee
+        - left_ankle
+        - right_ankle
+        - left_heel
+        - right_heel
+        - left_foot_index
+        - right_foot_index
+
+
+  #=================================
+  # Right Hand Aspect Configuration
+  #=================================  
+  right_hand:
+    tracked_points:
+      type: list
+      names:
+        - wrist
+        - thumb_cmc
+        - thumb_mcp
+        - thumb_ip
+        - thumb_tip
+        - index_finger_mcp
+        - index_finger_pip
+        - index_finger_dip
+        - index_finger_tip
+        - middle_finger_mcp
+        - middle_finger_pip
+        - middle_finger_dip
+        - middle_finger_tip
+        - ring_finger_mcp
+        - ring_finger_pip
+        - ring_finger_dip
+        - ring_finger_tip
+        - pinky_mcp
+        - pinky_pip
+        - pinky_dip
+        - pinky_tip 
+
+  #=================================
+  # Left Hand Aspect Configuration
+  #=================================
+  left_hand:
+    tracked_points:
+      type: list
+      names:
+        - wrist
+        - thumb_cmc
+        - thumb_mcp
+        - thumb_ip
+        - thumb_tip
+        - index_finger_mcp
+        - index_finger_pip
+        - index_finger_dip
+        - index_finger_tip
+        - middle_finger_mcp
+        - middle_finger_pip
+        - middle_finger_dip
+        - middle_finger_tip
+        - ring_finger_mcp
+        - ring_finger_pip
+        - ring_finger_dip
+        - ring_finger_tip
+        - pinky_mcp
+        - pinky_pip
+        - pinky_dip
+        - pinky_tip
+
+  #=================================
+  # Face Aspect Configuration
+  #=================================
+  face:
+    tracked_points:
+      type: generated
+      names:
+        convention: face_{:04d}
+        count: 478
+
+    virtual_marker_definitions: null
+
+    # MediaPipe Face Contour Connections from official source
+    # These are the contour connections as used in your get_mediapipe_face_info.py
+    segment_connections:
+      # Note: Face connections are typically referenced by index rather than name
+      # The connections below are stored as index pairs that form the contours
+      # These would typically be processed programmatically from the MediaPipe constants
+      # FACEMESH_LIPS, FACEMESH_LEFT_EYE, FACEMESH_RIGHT_EYE, etc.
+      # Since face points are generated with numeric names, connections should be handled
+      # in the code that processes this YAML, using the MediaPipe face_mesh_connections module
+      # The actual connections are available via:
+      # - FACEMESH_LIPS
+      # - FACEMESH_LEFT_EYE
+      # - FACEMESH_RIGHT_EYE
+      # - FACEMESH_LEFT_EYEBROW
+      # - FACEMESH_RIGHT_EYEBROW
+      # - FACEMESH_FACE_OVAL
+      # - FACEMESH_RIGHT_IRIS
+      # - FACEMESH_LEFT_IRIS
+      # These form the FACEMESH_CONTOURS when combined
+
+    center_of_mass_definitions: null
+    joint_hierarchy: null
+
+# Note: For face connections, since the landmarks are indexed (face_0000 to face_0477),
+# it's recommended to handle the connections programmatically using the MediaPipe
+# face_mesh_connections module rather than listing all connection pairs here.
+# The get_mediapipe_face_info.py file already extracts the correct contour indices.
