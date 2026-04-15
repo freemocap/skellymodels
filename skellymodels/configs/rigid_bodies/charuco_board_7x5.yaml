@@ -1,0 +1,39 @@
+# Charuco board 7x5: standalone rigid body with 24 inner corner keypoints.
+# Fully constrained — abundant non-colinear points for 6-DoF tracking.
+# Coordinate convention: +X forward, +Y left, +Z up.
+
+name: charuco_board_7x5
+keypoints:
+  - corner_0
+  - corner_1
+  - corner_2
+  - corner_3
+  - corner_4
+  - corner_5
+  - corner_6
+  - corner_7
+  - corner_8
+  - corner_9
+  - corner_10
+  - corner_11
+  - corner_12
+  - corner_13
+  - corner_14
+  - corner_15
+  - corner_16
+  - corner_17
+  - corner_18
+  - corner_19
+  - corner_20
+  - corner_21
+  - corner_22
+  - corner_23
+origin: corner_0
+coordinate_frame:
+  origin_keypoints: [corner_0]
+  x_axis:
+    keypoints: [corner_5]
+    type: exact
+  y_axis:
+    keypoints: [corner_1]
+    type: approximate
