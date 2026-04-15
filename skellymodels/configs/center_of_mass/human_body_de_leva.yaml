@@ -1,0 +1,81 @@
+# Center of mass parameters for the human body skeleton.
+# Source: De Leva (1996) - Adjustments to Zatsiorsky-Seluyanov's segment
+# inertia parameters. J. Biomechanics, 29(9), 1223-1230.
+#
+# com_length_ratio: fraction of segment length from proximal (origin) to distal
+# mass_fraction: fraction of total body mass
+# distal: override for distal reference point (omit to use RB default)
+
+skeleton_name: human_body
+source: "De Leva 1996"
+
+segments:
+  head:
+    rigid_body: skull
+    com_length_ratio: 0.5
+    mass_fraction: 0.081
+
+  spine:
+    rigid_body: spine_thoracic
+    com_length_ratio: 0.5
+    mass_fraction: 0.497
+
+  right_upper_arm:
+    rigid_body: right_upper_arm
+    com_length_ratio: 0.436
+    mass_fraction: 0.028
+
+  left_upper_arm:
+    rigid_body: left_upper_arm
+    com_length_ratio: 0.436
+    mass_fraction: 0.028
+
+  right_forearm:
+    rigid_body: right_forearm
+    com_length_ratio: 0.430
+    mass_fraction: 0.016
+
+  left_forearm:
+    rigid_body: left_forearm
+    com_length_ratio: 0.430
+    mass_fraction: 0.016
+
+  right_hand:
+    rigid_body: right_hand
+    com_length_ratio: 0.506
+    mass_fraction: 0.006
+
+  left_hand:
+    rigid_body: left_hand
+    com_length_ratio: 0.506
+    mass_fraction: 0.006
+
+  right_thigh:
+    rigid_body: right_thigh
+    com_length_ratio: 0.433
+    mass_fraction: 0.100
+
+  left_thigh:
+    rigid_body: left_thigh
+    com_length_ratio: 0.433
+    mass_fraction: 0.100
+
+  right_shank:
+    rigid_body: right_shank
+    com_length_ratio: 0.433
+    mass_fraction: 0.0465
+
+  left_shank:
+    rigid_body: left_shank
+    com_length_ratio: 0.433
+    mass_fraction: 0.0465
+
+  right_foot:
+    rigid_body: right_foot
+    com_length_ratio: 0.5
+    mass_fraction: 0.0145
+
+  left_foot:
+    rigid_body: left_foot
+    com_length_ratio: 0.5
+    mass_fraction: 0.0145

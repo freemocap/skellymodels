@@ -1,0 +1,63 @@
+# Minimal test skeleton for unit tests.
+# Simplified upper body: pelvis → spine → [skull, right_upper_arm → right_forearm]
+#
+# Coordinate convention: +X forward, +Y left, +Z up.
+# 2-keypoint bodies get auto-generated frames from the loader.
+
+name: test_skeleton
+
+rigid_bodies:
+  pelvis:
+    keypoints: [pelvis_origin, spine_base]
+    origin: pelvis_origin
+
+  spine:
+    keypoints: [spine_base, neck_base]
+    origin: spine_base
+
+  # Fully constrained: nose = +X forward, left eye = +Y left.
+  # Z = X × Y = up. ✓
+  skull:
+    keypoints: [neck_base, nose, left_eye]
+    origin: neck_base
+    coordinate_frame:
+      origin_keypoints: [neck_base]
+      x_axis:
+        keypoints: [nose]
+        type: exact
+      y_axis:
+        keypoints: [left_eye]
+        type: approximate
+
+  right_upper_arm:
+    keypoints: [neck_base, right_elbow]
+    origin: neck_base
+
+  right_forearm:
+    keypoints: [right_elbow, right_wrist]
+    origin: right_elbow
+
+linkages:
+  pelvis_spine:
+    parent_rigid_body: pelvis
+    child_rigid_bodies: [spine]
+    shared_keypoint: spine_base
+
+  neck_branch:
+    parent_rigid_body: spine
+    child_rigid_bodies: [skull, right_upper_arm]
+    shared_keypoint: neck_base
+
+  right_elbow_joint:
+    parent_rigid_body: right_upper_arm
+    child_rigid_bodies: [right_forearm]
+    shared_keypoint: right_elbow
+
+chains:
+  axial:
+    root_rigid_body: pelvis
+    linkages: [pelvis_spine, neck_branch]
+
+  right_arm:
+    root_rigid_body: right_upper_arm
+    linkages: [right_elbow_joint]

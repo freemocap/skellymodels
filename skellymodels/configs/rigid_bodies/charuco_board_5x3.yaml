@@ -1,0 +1,22 @@
+# Charuco board 5x3: standalone rigid body with 8 inner corner keypoints.
+# Fully constrained — enough non-colinear points for 6-DoF tracking.
+
+name: charuco_board_5x3
+keypoints:
+  - corner_0
+  - corner_1
+  - corner_2
+  - corner_3
+  - corner_4
+  - corner_5
+  - corner_6
+  - corner_7
+origin: corner_0
+coordinate_frame:
+  origin_keypoints: [corner_0]
+  x_axis:
+    keypoints: [corner_3]
+    type: exact
+  y_axis:
+    keypoints: [corner_4]
+    type: approximate
