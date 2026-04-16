@@ -23,8 +23,9 @@ from skellymodels.core.models.tracking_model_info import load_tracker_info_from_
 from skellymodels.core.trajectory import SpatialTrajectory
 
 # Load definitions
-skeleton = load_skeleton_from_yaml("skellymodels/configs/skeletons/human_body.yaml")
-mapping = load_mapping_from_yaml("skellymodels/configs/mappings/mediapipe_human_body.yaml")
+skeleton = load_skeleton_from_yaml("skellymodels/configs/skeletons/human/body/body_skeleton.yaml")
+mapping = load_mapping_from_yaml(
+    "skellymodels/configs/tracker_info/mediapipe/mappings/mediapipe_to_human_body_mapping.yaml")
 tracker_info = load_tracker_info_from_yaml("skellymodels/tracker_info/mediapipe_model_info.yaml")
 
 # Apply mapping — tracker_info handles the point names, no raw strings needed

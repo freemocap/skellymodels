@@ -1,0 +1,9 @@
+# Human body skeleton definition.
+
+name: human_body
+parent: body_axial_chain
+children:
+    - body_right_arm_chain
+    - body_left_arm_chain
+    - body_right_leg_chain
+    - body_left_leg_chain

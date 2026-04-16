@@ -1,0 +1,84 @@
+# Human rigid bodies
+
+name: human_body
+linkages:
+  sacrum_lumbar:
+    parent_rigid_body: pelvis
+    child_rigid_bodies: [spine_lumbar]
+    shared_keypoint: pelvis_spine_sacrum_origin
+
+  lumbar_thoracic:
+    parent_rigid_body: spine_lumbar
+    child_rigid_bodies: [spine_thoracic]
+    shared_keypoint: spine_lumbar_l1
+
+  # Branching: T1 connects to cervical spine + both clavicles
+  thoracic_t1:
+    parent_rigid_body: spine_thoracic
+    child_rigid_bodies: [spine_cervical, right_clavicle, left_clavicle]
+    shared_keypoint: spine_thoracic_top_t1
+
+  cervical_skull:
+    parent_rigid_body: spine_cervical
+    child_rigid_bodies: [skull]
+    shared_keypoint: skull_origin_foramen_magnum
+
+  right_shoulder_joint:
+    parent_rigid_body: right_clavicle
+    child_rigid_bodies: [right_upper_arm]
+    shared_keypoint: right_shoulder
+
+  right_elbow_joint:
+    parent_rigid_body: right_upper_arm
+    child_rigid_bodies: [right_forearm]
+    shared_keypoint: right_elbow
+
+  right_wrist_joint:
+    parent_rigid_body: right_forearm
+    child_rigid_bodies: [right_hand]
+    shared_keypoint: right_wrist
+
+  left_shoulder_joint:
+    parent_rigid_body: left_clavicle
+    child_rigid_bodies: [left_upper_arm]
+    shared_keypoint: left_shoulder
+
+  left_elbow_joint:
+    parent_rigid_body: left_upper_arm
+    child_rigid_bodies: [left_forearm]
+    shared_keypoint: left_elbow
+
+  left_wrist_joint:
+    parent_rigid_body: left_forearm
+    child_rigid_bodies: [left_hand]
+    shared_keypoint: left_wrist
+
+  right_hip_joint:
+    parent_rigid_body: pelvis
+    child_rigid_bodies: [right_thigh]
+    shared_keypoint: pelvis_right_hip_acetabulum
+
+  right_knee_joint:
+    parent_rigid_body: right_thigh
+    child_rigid_bodies: [right_shank]
+    shared_keypoint: right_knee
+
+  right_ankle_joint:
+    parent_rigid_body: right_shank
+    child_rigid_bodies: [right_foot]
+    shared_keypoint: right_ankle
+
+  left_hip_joint:
+    parent_rigid_body: pelvis
+    child_rigid_bodies: [left_thigh]
+    shared_keypoint: pelvis_left_hip_acetabulum
+
+  left_knee_joint:
+    parent_rigid_body: left_thigh
+    child_rigid_bodies: [left_shank]
+    shared_keypoint: left_knee
+
+  left_ankle_joint:
+    parent_rigid_body: left_shank
+    child_rigid_bodies: [left_foot]
+    shared_keypoint: left_ankle

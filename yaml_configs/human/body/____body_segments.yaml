@@ -1,0 +1,156 @@
+# Human body segments
+
+name: human
+keypoint_source: human_body_keypoints
+name_template: "{actor_id}_{segment}"
+
+segments:
+  # fully specified segments with coordinate frames defined by 3 or more keypoints
+  pelvis:
+    keypoints:
+      - pelvis_spine_sacrum_origin
+      - pelvis_right_hip_acetabulum
+      - pelvis_left_hip_acetabulum
+    origin: pelvis_spine_sacrum_origin
+    coordinate_frame:
+      origin_keypoints: [pelvis_spine_sacrum_origin]
+      y_axis:
+        keypoints: [pelvis_left_hip_acetabulum]
+        type: exact
+      z_axis:
+        keypoints: [spine_lumbar_l1]
+        type: approximate
+  skull:
+    keypoints:
+      - skull_origin_foramen_magnum
+      - nose_tip
+      - right_eye_inner
+      - right_eye_center
+      - right_eye_outer
+      - right_acoustic_meatus
+      - right_canine_tooth_tip
+      - left_eye_inner
+      - left_eye_center
+      - left_eye_outer
+      - left_acoustic_meatus
+      - left_canine_tooth_tip
+    origin: skull_origin_foramen_magnum
+    coordinate_frame:
+      origin_keypoints: [skull_origin_foramen_magnum]
+      x_axis:
+        keypoints: [nose_tip]
+        type: exact
+      y_axis:
+        keypoints: [left_eye_inner]
+        type: approximate
+  right_hand:
+    keypoints:
+      - right_wrist
+      - right_index_knuckle
+      - right_pinky_knuckle
+      - right_thumb_knuckle
+    origin: right_wrist
+    coordinate_frame:
+      origin_keypoints: [ right_wrist ]
+      x_axis:
+        keypoints: [ right_index_knuckle ]
+        type: exact
+      y_axis:
+        keypoints: [ right_thumb_knuckle ]
+        type: approximate
+  left_hand:
+    keypoints:
+      - left_wrist
+      - left_index_knuckle
+      - left_pinky_knuckle
+      - left_thumb_knuckle
+    origin: left_wrist
+    coordinate_frame:
+      origin_keypoints: [left_wrist]
+      x_axis:
+        keypoints: [left_index_knuckle]
+        type: exact
+      y_axis:
+        keypoints: [left_pinky_knuckle]
+        type: approximate
+  right_foot:
+    keypoints:
+      - right_ankle
+      - right_heel
+      - right_hallux_tip
+    origin: right_ankle
+    coordinate_frame:
+      origin_keypoints: [right_ankle]
+      x_axis:
+        keypoints: [right_hallux_tip]
+        type: exact
+      y_axis: # TODO - add ability to specify negated axis
+        keypoints: [right_heel]
+        type: approximate
+  left_foot:
+    keypoints:
+      - left_ankle
+      - left_heel
+      - left_hallux_tip
+    origin: left_ankle
+    coordinate_frame:
+      origin_keypoints: [left_ankle]
+      x_axis:
+        keypoints: [left_hallux_tip]
+        type: exact
+      y_axis: # TODO - add ability to specify negated axis
+        keypoints: [left_heel]
+        type: approximate
+  spine_lumbar:
+    keypoints: [pelvis_spine_sacrum_origin, spine_lumbar_l1]
+    origin: pelvis_spine_sacrum_origin
+
+  spine_thoracic:
+    keypoints: [spine_lumbar_l1, spine_thoracic_top_t1]
+    origin: spine_lumbar_l1
+
+  spine_cervical:
+    keypoints: [spine_thoracic_top_t1, skull_origin_foramen_magnum]
+    origin: spine_thoracic_top_t1
+
+  # TODO - offset clavicle origins forward from T1 to approx the sternoclavicular joint
+  right_clavicle:
+    keypoints: [spine_thoracic_top_t1, right_shoulder]
+    origin: spine_thoracic_top_t1
+
+  # TODO - offset clavicle origins forward from T1 to approx the sternoclavicular joint
+  left_clavicle:
+    keypoints: [spine_thoracic_top_t1, left_shoulder]
+    origin: spine_thoracic_top_t1
+
+  right_upper_arm:
+    keypoints: [right_shoulder, right_elbow]
+    origin: right_shoulder
+
+  right_forearm:
+    keypoints: [right_elbow, right_wrist]
+    origin: right_elbow
+
+  left_upper_arm:
+    keypoints: [left_shoulder, left_elbow]
+    origin: left_shoulder
+
+  left_forearm:
+    keypoints: [left_elbow, left_wrist]
+    origin: left_elbow
+
+  right_thigh:
+    keypoints: [pelvis_right_hip_acetabulum, right_knee]
+    origin: pelvis_right_hip_acetabulum
+
+  right_shank:
+    keypoints: [right_knee, right_ankle]
+    origin: right_knee
+
+  left_thigh:
+    keypoints: [pelvis_left_hip_acetabulum, left_knee]
+    origin: pelvis_left_hip_acetabulum
+
+  left_shank:
+    keypoints: [left_knee, left_ankle]
+    origin: left_knee

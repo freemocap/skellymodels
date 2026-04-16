@@ -1,0 +1,102 @@
+# Mediapipe body tracker → human_body skeleton keypoint mapping.
+# Translates 33 mediapipe tracked points into anatomical keypoints.
+#
+# Mapping forms:
+#   str           → 1:1 direct
+#   list          → equal-weight average
+#   dict          → weighted sum (weights sum to 1.0)
+
+tracker_name: mediapipe
+skeleton_name: human_body
+
+mappings:
+  # === Skull ===
+  nose_tip: nose
+  right_eye_inner: right_eye_inner
+  right_eye_center: right_eye
+  right_eye_outer: right_eye_outer
+  right_acoustic_meatus: right_ear
+  right_canine_tooth_tip: mouth_right
+  left_eye_inner: left_eye_inner
+  left_eye_center: left_eye
+  left_eye_outer: left_eye_outer
+  left_acoustic_meatus: left_ear
+  left_canine_tooth_tip: mouth_left
+
+  skull_origin_foramen_magnum:
+    - left_ear
+    - right_ear
+
+  # === Spine ===
+  spine_cervical_top_c1_axis:
+    left_ear: 0.45
+    right_ear: 0.45
+    left_shoulder: 0.05
+    right_shoulder: 0.05
+
+  spine_cervical_origin_c7:
+    left_ear: 0.4
+    right_ear: 0.4
+    left_shoulder: 0.1
+    right_shoulder: 0.1
+
+  spine_thoracic_top_t1:
+    - left_shoulder
+    - right_shoulder
+
+  spine_thoracic_origin_t12:
+    - left_hip
+    - right_hip
+    - left_shoulder
+    - right_shoulder
+
+  spine_lumbar_l1:
+    left_hip: 0.24
+    right_hip: 0.24
+    left_shoulder: 0.26
+    right_shoulder: 0.26
+
+  pelvis_spine_sacrum_origin:
+    - left_hip
+    - right_hip
+
+  # === Clavicles ===
+  right_sternoclavicular:
+    right_shoulder: 0.55
+    left_shoulder: 0.45
+
+  left_sternoclavicular:
+    left_shoulder: 0.55
+    right_shoulder: 0.45
+
+  # === Right arm ===
+  right_shoulder: right_shoulder
+  right_elbow: right_elbow
+  right_wrist: right_wrist
+  right_index_knuckle: right_index
+  right_pinky_knuckle: right_pinky
+  right_thumb_knuckle: right_thumb
+
+  # === Left arm ===
+  left_shoulder: left_shoulder
+  left_elbow: left_elbow
+  left_wrist: left_wrist
+  left_index_knuckle: left_index
+  left_pinky_knuckle: left_pinky
+  left_thumb_knuckle: left_thumb
+
+  # === Pelvis / hips ===
+  pelvis_right_hip_acetabulum: right_hip
+  pelvis_left_hip_acetabulum: left_hip
+
+  # === Right leg ===
+  right_knee: right_knee
+  right_ankle: right_ankle
+  right_heel: right_heel
+  right_hallux_tip: right_foot_index
+
+  # === Left leg ===
+  left_knee: left_knee
+  left_ankle: left_ankle
+  left_heel: left_heel
+  left_hallux_tip: left_foot_index

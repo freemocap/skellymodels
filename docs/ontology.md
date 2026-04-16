@@ -74,7 +74,7 @@ Convention: **+X forward, +Y left, +Z up. Right-handed only.**
 
 ### YAML
 
-See [`configs/skeletons/human_body.yaml`](../skellymodels/configs/skeletons/human_body.yaml), [`configs/rigid_bodies/charuco_board_5x3.yaml`](../skellymodels/configs/actors/charuco_board_5x3.yaml).
+See [`configs/skeletons/human_body.yaml`](../skellymodels/configs/skeletons/human/body/body_skeleton.yaml), [`configs/rigid_bodies/charuco_board_5x3.yaml`](../skellymodels/configs/actors/charuco_board_5x3.yaml).
 
 2-keypoint bodies omit `coordinate_frame` — the loader auto-generates a 1-axis frame:
 
@@ -129,7 +129,7 @@ A linear kinematic path. At branching linkages, follows one child. Aligned with 
 
 ### YAML
 
-See [`configs/skeletons/human_body.yaml`](../skellymodels/configs/skeletons/human_body.yaml):
+See [`configs/skeletons/human_body.yaml`](../skellymodels/configs/skeletons/human/body/body_skeleton.yaml):
 
 ```yaml
 name: human_body
@@ -165,7 +165,7 @@ Translates tracker namespace → skeleton namespace. Three forms, inferred from 
 
 ### YAML
 
-See [`configs/mappings/mediapipe_human_body.yaml`](../skellymodels/configs/mappings/mediapipe_human_body.yaml):
+See [`configs/mappings/mediapipe_human_body.yaml`](../skellymodels/configs/tracker_info/mediapipe/mappings/mediapipe_to_human_body_mapping.yaml):
 
 ```yaml
 tracker_name: mediapipe

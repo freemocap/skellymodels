@@ -11,9 +11,13 @@ if __name__ == "__main__":
     tracker_data = np.load(Path().home() /"freemocap_data/recordings/freemocap_test_data/output_data/mediapipe_skeleton_3d.npy")
     # Load definitions
     current_file_path = Path(__file__).parent
-    human_body_skeleton_path = current_file_path / "configs/skeletons/human_body.yaml"
-    mapping_path = current_file_path / "configs/mappings/mediapipe_human_body.yaml"
+    human_body_skeleton_path = current_file_path / "skellymodels/configs/skeletons/human_body.yaml"
+    mapping_path = current_file_path / "skellymodels/configs/mappings/mediapipe_human_body.yaml"
     tracker_info_path = current_file_path / "configs/skeletons/mediapipe_human_body.yaml"
+
+    assert human_body_skeleton_path.exists(), f"Skeleton definition file not found at {human_body_skeleton_path}"
+    assert mapping_path.exists(), f"Mapping file not found at {mapping_path}"
+    assert tracker_info_path.exists(), f"Tracker info file not found at {tracker_info_path}"
 
     skeleton = load_skeleton_from_yaml(human_body_skeleton_path)
     mapping = load_mapping_from_yaml(mapping_path)

@@ -1,0 +1,45 @@
+# https://www.assh.org/handcare/anatomy/joints
+# https://en.wikipedia.org/wiki/Hand#/media/File:814_Radiograph_of_Hand.jpg
+
+base_name: hand
+name_template: "{actor_id}_{left/right}_hand"
+
+keypoints:
+
+  # wrist
+  RADIO_CARPAL: "Radiocarpal joint, where the distal radius articulates with the proximal row of carpal bones (scaphoid, lunate, triquetrum)"
+  MID_CARPAL: "Midcarpal joint, between the proximal row (scaphoid, lunate, triquetrum) and distal row (trapezium, trapezoid, capitate, hamate) of carpal bones"
+
+  # thumb
+  THUMB_BASAL_CARPO_METACARPAL: "Carpometacarpal joint of the thumb, saddle joint between the trapezium and the base of the first metacarpal"
+  THUMB_META_CARPO_PHALANGEAL: "Metacarpophalangeal joint of the thumb (thumb knuckle), between the first metacarpal head and the base of the proximal phalanx"
+  THUMB_INTER_PHALANGEAL: "Interphalangeal joint of the thumb, the single hinge joint between the proximal and distal phalanges of the thumb"
+  THUMB_TIP: "Tip of the thumb, most distal point of the distal phalanx"
+
+  # index
+  INDEX_FINGER_CARPO_META_CARPAL: "Carpometacarpal joint of the index finger, between the trapezoid and the base of the second metacarpal"
+  INDEX_FINGER_META_CARPO_PHALANGEAL: "Metacarpophalangeal joint of the index finger (index knuckle), between the second metacarpal head and the base of the proximal phalanx"
+  INDEX_FINGER_PROXIMAL_INTER_PHALANGEAL: "Proximal interphalangeal joint of the index finger, hinge joint between the proximal and middle phalanges"
+  INDEX_FINGER_DISTAL_INTER_PHALANGEAL: "Distal interphalangeal joint of the index finger, hinge joint between the middle and distal phalanges"
+  INDEX_FINGER_TIP: "Tip of the index finger, most distal point of the distal phalanx"
+
+  # middle
+  MIDDLE_FINGER_CARPO_META_CARPAL: "Carpometacarpal joint of the middle finger, between the capitate and the base of the third metacarpal"
+  MIDDLE_FINGER_META_CARPO_PHALANGEAL: "Metacarpophalangeal joint of the middle finger (middle knuckle), between the third metacarpal head and the base of the proximal phalanx"
+  MIDDLE_FINGER_PROXIMAL_INTER_PHALANGEAL: "Proximal interphalangeal joint of the middle finger, hinge joint between the proximal and middle phalanges"
+  MIDDLE_FINGER_DISTAL_INTER_PHALANGEAL: "Distal interphalangeal joint of the middle finger, hinge joint between the middle and distal phalanges"
+  MIDDLE_FINGER_TIP: "Tip of the middle finger, most distal point of the distal phalanx"
+
+  # ring
+  RING_FINGER_CARPO_META_CARPAL: "Carpometacarpal joint of the ring finger, between the hamate/capitate and the base of the fourth metacarpal"
+  RING_FINGER_META_CARPO_PHALANGEAL: "Metacarpophalangeal joint of the ring finger (ring knuckle), between the fourth metacarpal head and the base of the proximal phalanx"
+  RING_FINGER_PROXIMAL_INTER_PHALANGEAL: "Proximal interphalangeal joint of the ring finger, hinge joint between the proximal and middle phalanges"
+  RING_FINGER_DISTAL_INTER_PHALANGEAL: "Distal interphalangeal joint of the ring finger, hinge joint between the middle and distal phalanges"
+  RING_FINGER_TIP: "Tip of the ring finger, most distal point of the distal phalanx"
+
+  # pinky
+  PINKY_FINGER_CARPO_META_CARPAL: "Carpometacarpal joint of the pinky finger, between the hamate and the base of the fifth metacarpal"
+  PINKY_FINGER_META_CARPO_PHALANGEAL: "Metacarpophalangeal joint of the pinky finger (pinky knuckle), between the fifth metacarpal head and the base of the proximal phalanx"
+  PINKY_FINGER_PROXIMAL_INTER_PHALANGEAL: "Proximal interphalangeal joint of the pinky finger, hinge joint between the proximal and middle phalanges"
+  PINKY_FINGER_DISTAL_INTER_PHALANGEAL: "Distal interphalangeal joint of the pinky finger, hinge joint between the middle and distal phalanges"
+  PINKY_FINGER_TIP: "Tip of the pinky finger, most distal point of the distal phalanx"
