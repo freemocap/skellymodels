@@ -4,21 +4,21 @@ name: human_body
 
 chains:
   axial:
-    root_rigid_body: pelvis
+    root_segment: pelvis
     linkages: [sacrum_lumbar, lumbar_thoracic, thoracic_t1, cervical_skull]
 
   right_arm:
-    root_rigid_body: right_clavicle
+    root_segment: right_clavicle
     linkages: [right_shoulder_joint, right_elbow_joint, right_wrist_joint]
 
   left_arm:
-    root_rigid_body: left_clavicle
+    root_segment: left_clavicle
     linkages: [left_shoulder_joint, left_elbow_joint, left_wrist_joint]
 
   right_leg:
-    root_rigid_body: right_thigh
+    root_segment: right_thigh
     linkages: [right_knee_joint, right_ankle_joint]
 
   left_leg:
-    root_rigid_body: left_thigh
+    root_segment: left_thigh
     linkages: [left_knee_joint, left_ankle_joint]

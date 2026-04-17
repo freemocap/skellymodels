@@ -4,76 +4,76 @@ name_template: "body"
 keypoints:
 
   # skull
-  SKULL_ORIGIN_FORAMEN_MAGNUM: "Geometric center of the foramen magnum, the hole at the base of the skull where the spinal cord enters"
-  SKULL_TOP_BREGMA: "Tippy top of the head, intersection of the coronal and sagittal sutures"
+  skull_origin_foramen_magnum: "Geometric center of the foramen magnum, the hole at the base of the skull where the spinal cord enters"
+  skull_top_bregma: "Tippy top of the head, intersection of the coronal and sagittal sutures"
 
   # face
-  NOSE_TIP: "Tip of the nose"
+  nose_tip: "Tip of the nose"
 
   # right face
-  RIGHT_EYE_INNER: "Inner corner of the right eye socket, in the lacrimal fossa (aka tear duct), intersection of the frontal bone and the maxilla"
-  RIGHT_EYE_CENTER: "Geometric center of the inner and outer right eye keypoints - NOTE: not the center of the orbit"
-  RIGHT_EYE_OUTER: "Outer corner of the right eye, intersection of the frontal bone and the zygomatic bone"
-  RIGHT_ACOUSTIC_MEATUS: "Entrance to the right ear canal, intersection of the temporal bone and the mandible (behind tragus)"
-  RIGHT_CANINE_TOOTH_TIP: "Tip of the right canine tooth, roughly behind the right corner of the mouth"
+  right_eye_inner: "Inner corner of the right eye socket, in the lacrimal fossa (aka tear duct), intersection of the frontal bone and the maxilla"
+  right_eye_center: "Geometric center of the inner and outer right eye keypoints.  NOTE -  this is *not* the center of the orbit, but is closer to the surface of the face"
+  right_eye_outer: "Outer corner of the right eye, intersection of the frontal bone and the zygomatic bone"
+  right_acoustic_meatus: "Entrance to the right ear canal, intersection of the temporal bone and the mandible (behind tragus)"
+  right_canine_tooth_tip: "Tip of the right canine tooth, roughly behind the right corner of the mouth"
 
   # left face
-  LEFT_EYE_INNER: "Inner corner of the left eye socket, in the lacrimal fossa (aka tear duct), intersection of the frontal bone and the maxilla"
-  LEFT_EYE_CENTER: "Geometric center of the inner and outer left eye keypoints - NOTE: not the center of the orbit"
-  LEFT_EYE_OUTER: "Outer corner of the left eye, intersection of the frontal bone and the zygomatic bone"
-  LEFT_ACOUSTIC_MEATUS: "Entrance to the left ear canal, intersection of the temporal bone and the mandible (behind tragus)"
-  LEFT_CANINE_TOOTH_TIP: "Tip of the left canine tooth, roughly behind the left corner of the mouth"
+  left_eye_inner: "Inner corner of the left eye socket, in the lacrimal fossa (aka tear duct), intersection of the frontal bone and the maxilla"
+  left_eye_center: "Geometric center of the inner and outer left eye keypoints. NOTE -  this is *not* the center of the orbit, but is closer to the surface of the face"
+  left_eye_outer: "Outer corner of the left eye, intersection of the frontal bone and the zygomatic bone"
+  left_acoustic_meatus: "Entrance to the left ear canal, intersection of the temporal bone and the mandible (behind tragus)"
+  left_canine_tooth_tip: "Tip of the left canine tooth, roughly behind the left corner of the mouth"
 
   # neck
-  SPINE_CERVICAL_TOP_C1_AXIS: "Top of the neck segment, geometric center of the top surface of the second cervical vertebra (C2) aka the Axis"
-  SPINE_CERVICAL_ORIGIN_C7: "Base of the neck, geometric center of the bottom surface of the seventh cervical vertebra (C7)"
+  spine_cervical_top_c1_axis: "Top of the neck segment, geometric center of the top surface of the second cervical vertebra (C2) aka the Axis"
+  spine_cervical_origin_c7: "Base of the neck, geometric center of the bottom surface of the seventh cervical vertebra (C7)"
 
   # chest
-  SPINE_THORACIC_TOP_T1: "Geometric center of the top surface of the first thoracic vertebra (T1)"
-  SPINE_THORACIC_ORIGIN_T12: "Geometric center of the bottom surface of the twelfth thoracic vertebra (T12)"
-  STERNUM_TOP_SUPRASTERNAL_NOTCH: "Geometric center of the suprasternal notch, the dip at the top of the sternum"
-  STERNUM_ORIGIN_XIPHOID_PROCESS: "Geometric center of the xiphoid process, the bottom tip of the sternum"
+  spine_thoracic_top_t1: "Geometric center of the top surface of the first thoracic vertebra (T1)"
+  spine_thoracic_origin_t12: "Geometric center of the bottom surface of the twelfth thoracic vertebra (T12)"
+  sternum_top_suprasternal_notch: "Geometric center of the suprasternal notch, the dip at the top of the sternum"
+  sternum_origin_xiphoid_process: "Geometric center of the xiphoid process, the bottom tip of the sternum"
 
   # pelvis and lumbar
-  PELVIS_SPINE_SACRUM_ORIGIN: "Geometric center of the left and right hip sockets, anterior to the sacrum"
-  SPINE_LUMBAR_L1: "Geometric center of the top surface of the first lumbar vertebra (L1)"
-  PELVIS_RIGHT_HIP_ACETABULUM: "Geometric center of the proximal surface of the right hip socket/acetabulum (where the femoral head fits in)"
-  PELVIS_LEFT_HIP_ACETABULUM: "Geometric center of the proximal surface of the left hip socket/acetabulum (where the femoral head fits in)"
+  pelvis_spine_sacrum_origin: "Geometric center of the left and right hip sockets, anterior to the sacrum"
+  spine_lumbar_l1: "Geometric center of the top surface of the first lumbar vertebra (L1)"
+  pelvis_right_hip_acetabulum: "Geometric center of the proximal surface of the right hip socket/acetabulum (where the femoral head fits in)"
+  pelvis_left_hip_acetabulum: "Geometric center of the proximal surface of the left hip socket/acetabulum (where the femoral head fits in)"
 
   # right arm
-  RIGHT_STERNOCLAVICLAR: "Center of the right sternoclavicular joint"
-  RIGHT_SHOULDER: "Center of the right glenohumeral joint"
-  RIGHT_ELBOW: "Center of the right elbow joint, near the trochlea of the humerus"
-  RIGHT_WRIST: "Center of the right radiocarpal joint, near the lunate fossa of the radius"
+  right_sternoclaviclar: "Center of the right sternoclavicular joint"
+  right_shoulder: "Center of the right glenohumeral joint"
+  right_elbow: "Center of the right elbow joint, near the trochlea of the humerus"
+  right_wrist: "Center of the right radiocarpal joint, near the lunate fossa of the radius"
 
   # right (mitten) hand
-  RIGHT_THUMB_KNUCKLE: "Center of the metacarpophalangeal joint of the right thumb"
-  RIGHT_INDEX_KNUCKLE: "Center of the metacarpophalangeal joint of the right index finger"
-  RIGHT_MIDDLE_KNUCKLE: "Center of the metacarpophalangeal joint of the right middle finger"
-  RIGHT_RING_KNUCKLE: "Center of the metacarpophalangeal joint of the right ring finger"
-  RIGHT_PINKY_KNUCKLE: "Center of the metacarpophalangeal joint of the right pinky finger"
+  right_thumb_knuckle: "Center of the metacarpophalangeal joint of the right thumb"
+  right_index_knuckle: "Center of the metacarpophalangeal joint of the right index finger"
+  right_middle_knuckle: "Center of the metacarpophalangeal joint of the right middle finger"
+  right_ring_knuckle: "Center of the metacarpophalangeal joint of the right ring finger"
+  right_pinky_knuckle: "Center of the metacarpophalangeal joint of the right pinky finger"
 
   # right leg
-  RIGHT_KNEE: "Center of the right knee joint, intersection of the medial condyle of the femur and the tibia"
-  RIGHT_ANKLE: "Center of the right ankle joint, geometric center of the medial and lateral malleoli"
-  RIGHT_HEEL: "Contact surface of the right heel with the ground, most distal point of the calcaneus"
-  RIGHT_HALLUX_TIP: "Tippy tip of the right hallux, aka the big toe"
+  right_knee: "Center of the right knee joint, intersection of the medial condyle of the femur and the tibia"
+  right_ankle: "Center of the right ankle joint, geometric center of the medial and lateral malleoli"
+  right_heel: "Contact surface of the right heel with the ground, most distal point of the calcaneus"
+  right_hallux_tip: "Tippy tip of the right hallux, aka the big toe"
 
   # left arm
-  LEFT_STERNOCLAVICLAR: "Center of the left sternoclavicular joint"
-  LEFT_SHOULDER: "Center of the left glenohumeral joint"
-  LEFT_ELBOW: "Center of the left elbow joint, near the trochlea of the humerus"
-  LEFT_WRIST: "Center of the left radiocarpal joint, near the lunate fossa of the radius"
+  left_sternoclaviclar: "Center of the left sternoclavicular joint"
+  left_shoulder: "Center of the left glenohumeral joint"
+  left_elbow: "Center of the left elbow joint, near the trochlea of the humerus"
+  left_wrist: "Center of the left radiocarpal joint, near the lunate fossa of the radius"
 
   # left (mitten) hand
-  LEFT_THUMB_KNUCKLE: "Center of the metacarpophalangeal joint of the left thumb"
-  LEFT_INDEX_KNUCKLE: "Center of the metacarpophalangeal joint of the left index finger"
-  LEFT_MIDDLE_KNUCKLE: "Center of the metacarpophalangeal joint of the left middle finger"
-  LEFT_RING_KNUCKLE: "Center of the metacarpophalangeal joint of the left ring finger"
-  LEFT_PINKY_KNUCKLE: "Center of the metacarpophalangeal joint of the left pinky finger"
+  left_thumb_knuckle: "Center of the metacarpophalangeal joint of the left thumb"
+  left_index_knuckle: "Center of the metacarpophalangeal joint of the left index finger"
+  left_middle_knuckle: "Center of the metacarpophalangeal joint of the left middle finger"
+  left_ring_knuckle: "Center of the metacarpophalangeal joint of the left ring finger"
+  left_pinky_knuckle: "Center of the metacarpophalangeal joint of the left pinky finger"
 
   # left leg
-  LEFT_KNEE: "Center of the left knee joint, intersection of the medial condyle of the femur and the tibia"
-  LEFT_ANKLE: "Center of the left ankle joint, geometric center of the medial and lateral malleoli"
-  LEFT_HEEL: "Contact surface of the left heel with the ground, most distal point of the calcaneus"
-  LEFT_HALLUX_TIP: "Tippy tip of the left hallux, aka the big toe"
+  left_knee: "Center of the left knee joint, intersection of the medial condyle of the femur and the tibia"
+  left_ankle: "Center of the left ankle joint, geometric center of the medial and lateral malleoli"
+  left_heel: "Contact surface of the left heel with the ground, most distal point of the calcaneus"
+  left_hallux_tip: "Tippy tip of the left hallux, aka the big toe"

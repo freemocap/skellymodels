@@ -1,0 +1,38 @@
+# Human rigid bodies
+
+name: hand
+segment_source: hand_segments
+chains:
+  thumb_chain:
+    root_segment: thumb_radio_carpal_segment
+    linkages:
+      - thumb_knuckle_linkage
+      - thumb_joint_linkage
+
+  index_finger_chain:
+    root_segment: index_finger_radio_carpal_segment
+    linkages:
+      - index_finger_knuckle_linkage
+      - index_finger_proximal_joint_linkage
+      - index_finger_distal_joint_linkage
+
+  middle_finger_chain:
+    root_segment: middle_finger_radio_carpal_segment
+    linkages:
+      - middle_finger_knuckle_linkage
+      - middle_finger_proximal_joint_linkage
+      - middle_finger_distal_joint_linkage
+
+  ring_finger_chain:
+    root_segment: ring_finger_radio_carpal_segment
+    linkages:
+      - ring_finger_knuckle_linkage
+      - ring_finger_proximal_joint_linkage
+      - ring_finger_distal_joint_linkage
+
+  pinky_finger_chain:
+    root_segment: pinky_finger_radio_carpal_segment
+    linkages:
+      - pinky_finger_knuckle_linkage
+      - pinky_finger_proximal_joint_linkage
+      - pinky_finger_distal_joint_linkage

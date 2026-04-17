@@ -1,0 +1,108 @@
+# https://www.assh.org/handcare/anatomy/joints
+# https://en.wikipedia.org/wiki/hand#/media/file:814_radiograph_of_hand.jpg
+
+base_name: hand
+name_template: "{actor_id}_{left/right}_hand"
+segment_source: hand_segments
+rigid_bodies:
+
+  # thumb
+  thumb_radio_carpal_segment:
+    origin: radio_carpal
+    z_axis_reference: thumb_basal_carpo_metacarpal
+
+  thumb_metacarpal_segment:
+    origin: thumb_basal_carpo_metacarpal
+    z_axis_reference: thumb_meta_carpo_phalangeal
+
+  thumb_proximal_phalanx_segment:
+    origin: thumb_meta_carpo_phalangeal
+    z_axis_reference: thumb_inter_phalangeal
+
+  thumb_distal_phalanx_segment:
+    origin: thumb_inter_phalangeal
+    z_axis_reference: thumb_tip
+
+  # index
+  index_finger_radio_carpal_segment:
+    origin: radio_carpal
+    z_axis_reference: index_finger_carpo_meta_carpal
+
+  index_finger_metacarpal_segment:
+    origin: index_finger_carpo_meta_carpal
+    z_axis_reference: index_finger_meta_carpo_phalangeal
+
+  index_finger_proximal_phalanx_segment:
+    origin: index_finger_meta_carpo_phalangeal
+    z_axis_reference: index_finger_proximal_inter_phalangeal
+
+  index_finger_middle_phalanx_segment:
+    origin: index_finger_proximal_inter_phalangeal
+    z_axis_reference: index_finger_distal_inter_phalangeal
+
+  index_finger_distal_phalanx_segment:
+    origin: index_finger_distal_inter_phalangeal
+    z_axis_reference: index_finger_tip
+
+  # middle
+  middle_finger_radio_carpal_segment:
+    origin: radio_carpal
+    z_axis_reference: middle_finger_carpo_meta_carpal
+
+  middle_finger_metacarpal_segment:
+    origin: middle_finger_carpo_meta_carpal
+    z_axis_reference: middle_finger_meta_carpo_phalangeal
+
+  middle_finger_proximal_phalanx_segment:
+    origin: middle_finger_meta_carpo_phalangeal
+    z_axis_reference: middle_finger_proximal_inter_phalangeal
+
+  middle_finger_middle_phalanx_segment:
+    origin: middle_finger_proximal_inter_phalangeal
+    z_axis_reference: middle_finger_distal_inter_phalangeal
+
+  middle_finger_distal_phalanx_segment:
+    origin: middle_finger_distal_inter_phalangeal
+    z_axis_reference: middle_finger_tip
+
+  # ring
+  ring_finger_radio_carpal_segment:
+    origin: radio_carpal
+    z_axis_reference: ring_finger_carpo_meta_carpal
+
+  ring_finger_metacarpal_segment:
+    origin: ring_finger_carpo_meta_carpal
+    z_axis_reference: ring_finger_meta_carpo_phalangeal
+
+  ring_finger_proximal_phalanx_segment:
+    origin: ring_finger_meta_carpo_phalangeal
+    z_axis_reference: ring_finger_proximal_inter_phalangeal
+
+  ring_finger_middle_phalanx_segment:
+    origin: ring_finger_proximal_inter_phalangeal
+    z_axis_reference: ring_finger_distal_inter_phalangeal
+
+  ring_finger_distal_phalanx_segment:
+    origin: ring_finger_distal_inter_phalangeal
+    z_axis_reference: ring_finger_tip
+
+  # pinky
+  pinky_finger_radio_carpal_segment:
+    origin: radio_carpal
+    z_axis_reference: pinky_finger_carpo_meta_carpal
+
+  pinky_finger_metacarpal_segment:
+    origin: pinky_finger_carpo_meta_carpal  # note: source had a bug here - origin was right_radio_carpal missing .value, corrected to pinky_finger_carpo_meta_carpal
+    z_axis_reference: pinky_finger_meta_carpo_phalangeal
+
+  pinky_finger_proximal_phalanx_segment:
+    origin: pinky_finger_meta_carpo_phalangeal
+    z_axis_reference: pinky_finger_proximal_inter_phalangeal
+
+  pinky_finger_middle_phalanx_segment:
+    origin: pinky_finger_proximal_inter_phalangeal
+    z_axis_reference: pinky_finger_distal_inter_phalangeal
+
+  pinky_finger_distal_phalanx_segment:
+    origin: pinky_finger_distal_inter_phalangeal
+    z_axis_reference: pinky_finger_tip

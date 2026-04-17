@@ -1,18 +1,6 @@
----
-name: mediapipe_face_tesselated
-tracker_name: MediapipeHolisticTracker
-
-# All 478 face landmarks (face_0000 – face_0477)
-# Connections are the FACEMESH_CONTOURS subset; the full FACEMESH_TESSELATION
-# triangle mesh (~1400 edges) is defined in mediapipe_names.py and can be
-# appended here if needed.
-tracked_points:
-  type: generated
-  names:
-    convention: face_{:04d}
-    count: 478
-
-segment_connections:
+name: mediapipe_face_contour
+# 136 unique landmark indices from FACEMESH_CONTOURS + irises
+connections:
   # lips
   - [face_0061, face_0146]
   - [face_0146, face_0091]

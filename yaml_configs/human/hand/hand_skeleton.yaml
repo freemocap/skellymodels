@@ -1,0 +1,9 @@
+# Human hand skeleton definition.
+
+name: human_hand
+parent: index_finger_chain
+children:
+    - thumb_chain
+    - middle_finger_chain
+    - ring_finger_chain
+    - pinky_finger_chain

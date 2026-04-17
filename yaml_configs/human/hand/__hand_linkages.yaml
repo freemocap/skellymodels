@@ -1,0 +1,95 @@
+# https://www.assh.org/handcare/safety/joints
+# https://en.wikipedia.org/wiki/hand#/media/file:814_radiograph_of_hand.jpg
+
+base_name: hand
+name_template: "{id}_hand"
+
+linkages:
+
+  # thumb
+  thumb_knuckle_linkage:
+    bodies:
+      - thumb_metacarpal_segment
+      - thumb_proximal_phalanx_segment
+    linked_keypoint: thumb_meta_carpo_phalangeal
+
+  thumb_joint_linkage:
+    bodies:
+      - thumb_proximal_phalanx_segment
+      - thumb_distal_phalanx_segment
+    linked_keypoint: thumb_inter_phalangeal
+
+  # index
+  index_finger_knuckle_linkage:
+    bodies:
+      - index_finger_metacarpal_segment
+      - index_finger_proximal_phalanx_segment
+    linked_keypoint: index_finger_meta_carpo_phalangeal
+
+  index_finger_proximal_joint_linkage:
+    bodies:
+      - index_finger_proximal_phalanx_segment
+      - index_finger_middle_phalanx_segment
+    linked_keypoint: index_finger_proximal_inter_phalangeal
+
+  index_finger_distal_joint_linkage:
+    bodies:
+      - index_finger_middle_phalanx_segment
+      - index_finger_distal_phalanx_segment
+    linked_keypoint: index_finger_distal_inter_phalangeal
+
+  middle_finger_knuckle_linkage:
+    bodies:
+      - middle_finger_metacarpal_segment
+      - middle_finger_proximal_phalanx_segment
+    linked_keypoint: middle_finger_meta_carpo_phalangeal
+
+  middle_finger_proximal_joint_linkage:
+    bodies:
+      - middle_finger_proximal_phalanx_segment
+      - middle_finger_middle_phalanx_segment
+    linked_keypoint: middle_finger_proximal_inter_phalangeal
+
+  middle_finger_distal_joint_linkage:
+    bodies:
+      - middle_finger_middle_phalanx_segment
+      - middle_finger_distal_phalanx_segment
+    linked_keypoint: middle_finger_distal_inter_phalangeal
+
+  # ring
+  ring_finger_knuckle_linkage:
+    bodies:
+      - ring_finger_metacarpal_segment
+      - ring_finger_proximal_phalanx_segment
+    linked_keypoint: ring_finger_meta_carpo_phalangeal
+
+  ring_finger_proximal_joint_linkage:
+    bodies:
+      - ring_finger_proximal_phalanx_segment
+      - ring_finger_middle_phalanx_segment
+    linked_keypoint: ring_finger_proximal_inter_phalangeal
+
+  ring_finger_distal_joint_linkage:
+    bodies:
+      - ring_finger_middle_phalanx_segment
+      - ring_finger_distal_phalanx_segment
+    linked_keypoint: ring_finger_distal_inter_phalangeal
+
+  # pinky
+  pinky_finger_knuckle_linkage:
+    bodies:
+      - pinky_finger_metacarpal_segment
+      - pinky_finger_proximal_phalanx_segment
+    linked_keypoint: pinky_finger_meta_carpo_phalangeal
+
+  pinky_finger_proximal_joint_linkage:
+    bodies:
+      - pinky_finger_proximal_phalanx_segment
+      - pinky_finger_middle_phalanx_segment
+    linked_keypoint: pinky_finger_proximal_inter_phalangeal
+
+  pinky_finger_distal_joint_linkage:
+    bodies:
+      - pinky_finger_middle_phalanx_segment
+      - pinky_finger_distal_phalanx_segment
+    linked_keypoint: pinky_finger_distal_inter_phalangeal
